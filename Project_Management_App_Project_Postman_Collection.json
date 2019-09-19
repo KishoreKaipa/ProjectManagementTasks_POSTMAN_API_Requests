@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "42c6cf01-3d14-48e4-b4dd-a76ac5d656d9",
+		"name": "Project_Management_App_Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateProject_POST_Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"projectDesc\": \"Plastics Embossing Project\",\n    \"priority\": 16,\n    \"startDate\": \"2019-09-22\",\n    \"endDate\": \"2019-09-24\",\n    \"user\": {\n        \"userId\": 12,\n        \"employeeId\": 102000,\n        \"firstName\": \"Narasimha Kishore\",\n        \"lastName\": \"Kaipa\",\n        \"project\": null,\n        \"task\": null\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/projectmanagement/projects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"projectmanagement",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProject_PUT_Request",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"projectId\": 20,\r\n    \"endDate\": \"2019-09-24T00:00:00.000+0000\",\r\n    \"priority\": 15,\r\n    \"projectDesc\": \"Plastics Project\",\r\n    \"startDate\": \"2019-09-22T00:00:00.000+0000\",\r\n    \"user\": {\r\n        \"userId\": 14,\r\n        \"employeeId\": 102000,\r\n        \"firstName\": \"Narasimha Kishore\",\r\n        \"lastName\": \"Kaipa\",\r\n        \"project\": null,\r\n        \"task\": null\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/projectmanagement/projects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"projectmanagement",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "Accept",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List_All_Projects_GET_Request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/projectmanagement/projects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"projectmanagement",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find_A_Project_GET_Request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/projectmanagement/projects/24",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"projectmanagement",
+						"projects",
+						"24"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_Project_DELETE_Request",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"projectId\": 23,\r\n    \"endDate\": \"2019-09-24T00:00:00.000+0000\",\r\n    \"priority\": 16,\r\n    \"projectDesc\": \"Plastics Embossing Project\",\r\n    \"startDate\": \"2019-09-22T00:00:00.000+0000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/projectmanagement/projects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"projectmanagement",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_Project_By_projectId_DELETE_Request",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/projectmanagement/projects/21",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"projectmanagement",
+						"projects",
+						"21"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
