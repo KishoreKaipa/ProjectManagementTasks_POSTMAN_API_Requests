@@ -29,7 +29,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"firstName\": \"Srini\",\n    \"lastName\": \"Dandu\",\n    \"employeeId\": 102003\n}",
+					"raw": "{\n    \"firstName\": \"Srinivasa Raju\",\n    \"lastName\": \"Dandu\",\n    \"employeeId\": 100003\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -125,7 +125,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8085/projectmanagement/users/5",
+					"raw": "http://localhost:8085/projectmanagement/users/41",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -134,7 +134,7 @@
 					"path": [
 						"projectmanagement",
 						"users",
-						"5"
+						"41"
 					]
 				},
 				"description": "AddUser_POST_Req_1"
@@ -160,7 +160,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"userId\": 12,\r\n    \"employeeId\": 102000,\r\n    \"firstName\": \"Narasimha Kishore\",\r\n    \"lastName\": \"Kaipa\",\r\n    \"project\": null,\r\n    \"task\": null\r\n}",
+					"raw": "{\r\n    \"userId\": 41,\r\n    \"employeeId\": 100000,\r\n    \"firstName\": \"Narasimha Kishore\",\r\n    \"lastName\": \"Kaipa\",\r\n    \"projectDetails\": null,\r\n    \"taskDetails\": null\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -201,7 +201,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \"userId\": 13,\r\n        \"employeeId\": 102001,\r\n        \"firstName\": \"Narasimha Kishore\",\r\n        \"lastName\": \"Kaipa\",\r\n        \"project\": null,\r\n        \"task\": null\r\n    }",
+					"raw": "{\r\n    \"userId\": 39,\r\n    \"employeeId\": 100000,\r\n    \"firstName\": \"Narasimha Kishore\",\r\n    \"lastName\": \"Mr.Kaipa\",\r\n    \"projectDetails\": null,\r\n    \"taskDetails\": null\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -240,7 +240,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8085/projectmanagement/users/15",
+					"raw": "http://localhost:8085/projectmanagement/users/40",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -249,7 +249,7 @@
 					"path": [
 						"projectmanagement",
 						"users",
-						"15"
+						"40"
 					]
 				}
 			},

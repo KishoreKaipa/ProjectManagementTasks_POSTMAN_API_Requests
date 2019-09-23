@@ -1,38 +1,32 @@
 {
 	"info": {
-		"_postman_id": "42c6cf01-3d14-48e4-b4dd-a76ac5d656d9",
-		"name": "Project_Management_App_Project",
+		"_postman_id": "d8fa5b81-0fe5-4c3b-ae5c-53e29cee810c",
+		"name": "Project_Management_App_ParentTasks",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "CreateProject_POST_Request",
+			"name": "CreateParentTask_POST_Request",
 			"request": {
 				"method": "POST",
 				"header": [
 					{
-						"key": "Content-Type",
-						"name": "Content-Type",
+						"key": "Accept",
 						"value": "application/json",
 						"type": "text"
 					},
 					{
-						"key": "Accept",
+						"key": "Content-Type",
 						"value": "application/json",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"projectDescription\": \"Plastics Instrumentation Project\",\n    \"priority\": 15,\n    \"userDetails\": {\n        \"userId\": 44\n    }\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\n\t\"parentTaskDescription\": \"Plastics Embossing Epic Feature Development\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8085/projectmanagement/projects",
+					"raw": "http://localhost:8085/projectmanagement/parent/tasks",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -40,14 +34,15 @@
 					"port": "8085",
 					"path": [
 						"projectmanagement",
-						"projects"
+						"parent",
+						"tasks"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "UpdateProject_PUT_Request",
+			"name": "UpdateParentTask_PUT_Request",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -58,22 +53,16 @@
 					},
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"projectId\": 47,\r\n    \"endDate\": \"2019-09-23\",\r\n    \"priority\": 15,\r\n    \"projectDescription\": \"Plastics Embossing Project\",\r\n    \"startDate\": \"2019-09-22\",\r\n    \"userDetails\": {\r\n        \"userId\": 42\r\n    }\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\r\n    \"parentId\": 59,\r\n    \"parentTaskDescription\": \"Plastics Embossing Epic Feature Development\",\r\n    \"projectDetails\": {\r\n    \"projectId\": 51\r\n    }\r\n}\r\n"
 				},
 				"url": {
-					"raw": "http://localhost:8085/projectmanagement/projects",
+					"raw": "http://localhost:8085/projectmanagement/parent/tasks",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -81,53 +70,15 @@
 					"port": "8085",
 					"path": [
 						"projectmanagement",
-						"projects"
-					],
-					"query": [
-						{
-							"key": "Accept",
-							"value": "",
-							"disabled": true
-						}
+						"parent",
+						"tasks"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "ListAllProjects_GET_Request",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://localhost:8085/projectmanagement/projects",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8085",
-					"path": [
-						"projectmanagement",
-						"projects"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "FindAProjectByProjectId_GET_Request",
+			"name": "ListAllParentTasks_GET_Request",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -143,7 +94,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8085/projectmanagement/projects/50",
+					"raw": "http://localhost:8085/projectmanagement/parent/tasks",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -151,15 +102,48 @@
 					"port": "8085",
 					"path": [
 						"projectmanagement",
-						"projects",
-						"50"
+						"parent",
+						"tasks"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "DeleteProject_DELETE_Request",
+			"name": "FindAParentTaskByParentTaskID_GET_Request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/projectmanagement/parent/tasks/57",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"projectmanagement",
+						"parent",
+						"tasks",
+						"57"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteParentTask_DELETE_Request",
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -170,22 +154,16 @@
 					},
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"projectId\": 47,\r\n    \"endDate\": \"2019-09-23\",\r\n    \"priority\": 15,\r\n    \"projectDescription\": \"Plastics Embossing Project\",\r\n    \"startDate\": \"2019-09-22\",\r\n    \"userDetails\": {\r\n        \"userId\": 42,\r\n        \"employeeId\": 100001,\r\n        \"firstName\": \"Narasimha Kishore\",\r\n        \"lastName\": \"Kaipa\",\r\n        \"projectDetails\": null,\r\n        \"taskDetails\": null\r\n    },\r\n    \"taskList\": []\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\r\n    \"parentId\": 57,\r\n    \"parentTaskDescription\": \"Plastics Embossing Epic Feature Development\"\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8085/projectmanagement/projects",
+					"raw": "http://localhost:8085/projectmanagement/parent/tasks",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -193,14 +171,15 @@
 					"port": "8085",
 					"path": [
 						"projectmanagement",
-						"projects"
+						"parent",
+						"tasks"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "DeleteProjectByProjectId_DELETE_Request",
+			"name": "DeleteParentTaskByParentTaskID_DELETE_Request",
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -216,7 +195,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8085/projectmanagement/projects/48",
+					"raw": "http://localhost:8085/projectmanagement/parent/tasks/58",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -224,8 +203,9 @@
 					"port": "8085",
 					"path": [
 						"projectmanagement",
-						"projects",
-						"48"
+						"parent",
+						"tasks",
+						"58"
 					]
 				}
 			},
